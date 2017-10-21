@@ -167,7 +167,6 @@ return [
         /*
          * Package Service Providers...
          */
-        MarvinLabs\Html\FontAwesome\FontAwesomeServiceProvider::class,
 
         /*
          * Application Service Providers...
