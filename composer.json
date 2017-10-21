@@ -8,7 +8,8 @@
         "php": ">=7.0.0",
         "fideloper/proxy": "~3.3",
         "laravel/framework": "5.5.*",
-        "laravel/tinker": "~1.0"
+        "laravel/tinker": "~1.0",
+        "spatie/laravel-html" : "~2.9.0"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.1",
@@ -25,12 +26,17 @@
             "database/factories"
         ],
         "psr-4": {
-            "App\\": "app/"
-        }
+            "App\\": "app/",
+            "MarvinLabs\\Html\\FontAwesome\\" : "packages/marvinlabs/laravel-html-font-awesome/src/FontAwesome"
+        },
+        "files" : [
+            "packages/marvinlabs/laravel-html-font-awesome/src/helpers.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\": "tests/"
+            "Tests\\": "tests/",
+            "MarvinLabs\\Html\\FontAwesome\\Tests\\" : "packages/marvinlabs/laravel-html-font-awesome/tests"
         }
     },
     "extra": {
