@@ -14,3 +14,7 @@
 Route::get('/font-awesome', function () {
     return view('laravel-html-font-awesome.tests');
 });
+
+Route::get('/bootstrap-4/{category}', function ($category) {
+    return view("laravel-html-bootstrap-4.{$category}");
+});

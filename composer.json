@@ -12,7 +12,8 @@
         "fideloper/proxy" : "~3.3",
         "laravel/framework" : "5.5.*",
         "laravel/tinker" : "~1.0",
-        "marvinlabs/laravel-html-font-awesome" : "*"
+        "marvinlabs/laravel-html-font-awesome" : "dev-develop",
+        "marvinlabs/laravel-html-bootstrap-4": "dev-develop"
     },
     "require-dev" : {
         "barryvdh/laravel-debugbar" : "^3.1",
@@ -64,6 +65,10 @@
         {
             "type" : "path",
             "url" : "packages/marvinlabs/laravel-html-font-awesome"
+        },
+        {
+            "type" : "path",
+            "url" : "packages/marvinlabs/laravel-html-bootstrap-4"
         }
     ]
 }

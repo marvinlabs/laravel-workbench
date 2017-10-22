@@ -4,8 +4,61 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "96645af39d1e21bfc41d2998f8c44548",
+    "content-hash": "2c39d1e753efb63cad0e58ce11fcecc5",
     "packages": [
+        {
+            "name": "appstract/laravel-blade-directives",
+            "version": "0.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/appstract/laravel-blade-directives.git",
+                "reference": "ccb159dd6d2f555e5ccc8b95506b12643ec38b92"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/appstract/laravel-blade-directives/zipball/ccb159dd6d2f555e5ccc8b95506b12643ec38b92",
+                "reference": "ccb159dd6d2f555e5ccc8b95506b12643ec38b92",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Appstract\\BladeDirectives\\BladeDirectivesServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Appstract\\BladeDirectives\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Gijs Jorissen",
+                    "email": "hello@appstract.team",
+                    "homepage": "https://appstract.team",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Handy Blade directives",
+            "homepage": "https://github.com/appstract/laravel-blade-directives",
+            "keywords": [
+                "appstract",
+                "laravel-blade-directives"
+            ],
+            "time": "2017-06-14T10:11:46+00:00"
+        },
         {
             "name": "dnoegel/php-xdg-base-dir",
             "version": "0.1",
@@ -681,18 +734,75 @@
             "time": "2017-08-06T17:41:04+00:00"
         },
         {
-            "name": "marvinlabs/laravel-html-font-awesome",
-            "version": "v1.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/marvinlabs/laravel-html-font-awesome.git",
-                "reference": "f82091616816181736293936720d62611550ee6f"
-            },
+            "name": "marvinlabs/laravel-html-bootstrap-4",
+            "version": "dev-develop",
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/marvinlabs/laravel-html-font-awesome/zipball/f82091616816181736293936720d62611550ee6f",
-                "reference": "f82091616816181736293936720d62611550ee6f",
-                "shasum": ""
+                "type": "path",
+                "url": "packages/marvinlabs/laravel-html-bootstrap-4",
+                "reference": "98e4e3869451d65061e8b86b2c15f4d29f52f9b0",
+                "shasum": null
+            },
+            "require": {
+                "appstract/laravel-blade-directives": "^0.2",
+                "php": "^7.0",
+                "spatie/laravel-html": "~2.9.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "MarvinLabs\\Html\\Bootstrap\\BootstrapServiceProvider"
+                    ],
+                    "aliases": {
+                        "FA": "MarvinLabs\\Html\\Bootstrap\\Facades\\Bootstrap"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "MarvinLabs\\Html\\Bootstrap\\": "src/Bootstrap"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "MarvinLabs\\Html\\Bootstrap\\Tests\\": "tests"
+                }
+            },
+            "scripts": {
+                "test": [
+                    "vendor/bin/phpunit"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Vincent Mimoun-Prat",
+                    "email": "contact@vincentprat.info",
+                    "homepage": "https://vincentprat.info",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A fluent html builder for Font Awesome icons",
+            "homepage": "https://github.com/marvinlabs/laravel-html-bootstrap-4",
+            "keywords": [
+                "bootstrap-4",
+                "html",
+                "marvinlabs"
+            ]
+        },
+        {
+            "name": "marvinlabs/laravel-html-font-awesome",
+            "version": "dev-develop",
+            "dist": {
+                "type": "path",
+                "url": "packages/marvinlabs/laravel-html-font-awesome",
+                "reference": "2e0aa13f2ab2979f9c09976f692f92b40d7a795a",
+                "shasum": null
             },
             "require": {
                 "php": "^7.0",
@@ -717,7 +827,16 @@
                     "src/helpers.php"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "MarvinLabs\\Html\\FontAwesome\\Tests\\": "tests"
+                }
+            },
+            "scripts": {
+                "test": [
+                    "vendor/bin/phpunit"
+                ]
+            },
             "license": [
                 "MIT"
             ],
@@ -735,8 +854,7 @@
                 "font-awesome",
                 "html",
                 "marvinlabs"
-            ],
-            "time": "2017-10-21T19:38:12+00:00"
+            ]
         },
         {
             "name": "monolog/monolog",
@@ -4368,7 +4486,10 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "marvinlabs/laravel-html-font-awesome": 20,
+        "marvinlabs/laravel-html-bootstrap-4": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
