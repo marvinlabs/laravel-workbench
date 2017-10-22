@@ -12,5 +12,5 @@
 */
 
 Route::get('/font-awesome', function () {
-    return view('fontawesome.tests');
+    return view('laravel-html-font-awesome.tests');
 });
