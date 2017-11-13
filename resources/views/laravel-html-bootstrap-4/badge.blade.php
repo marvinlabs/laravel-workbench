@@ -6,20 +6,25 @@
 
     <div class="container">
 
-        <h1>Alerts</h1>
+        <h1>Badges</h1>
 
-        @component('bs::alert', ['type' => 'danger'])
-            A simple alert of danger type
-        @endcomponent
+        <p>
+        {!! bs()->badge()->text('Secondary by default') !!}
+        </p>
 
-        @component('bs::alert', ['type' => 'success'])
-            This is a primary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
-        @endcomponent
+        <p>
+            @foreach (['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'light', 'dark'] as $type)
+                {!! bs()->badge($type)->text($type) !!}
+            @endforeach
+        </p>
 
-        @component('bs::alert', ['type' => 'info', 'animated' => true, 'dismissible' => true])
-            Animated alert, and dismissible
-        @endcomponent
+        <h1>Badges with links</h1>
 
+        <p>
+            @foreach (['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'light', 'dark'] as $type)
+                {!! bs()->badge($type)->text($type)->link('#') !!}
+            @endforeach
+        </p>
     </div>
 
 @endsection
