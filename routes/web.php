@@ -26,8 +26,10 @@ Route::get('/bootstrap-4/{category}', function ($category) {
         ]);
 });
 
-Route::post('/bootstrap-4/{category}', function ($category) {
-    return view("laravel-html-bootstrap-4.{$category}")->withErrors([
-        'last_name' => 'Now there is an error on the last name',
-    ]);
+Route::match(['post', 'put'], '/bootstrap-4/{category}', function ($category) {
+    return redirect()->back()
+        ->withInput()
+        ->withErrors([
+            'last_name' => 'Now there is an error on the last name',
+        ]);
 })->name('form-submit');
