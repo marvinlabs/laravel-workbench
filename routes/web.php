@@ -30,5 +30,7 @@ Route::match(['post', 'put'], '/bootstrap-4/{category}', function ($category) {
             'last_name'   => 'The last name is required',
             'email'       => 'This is a sample error for emails',
             'agree_terms' => 'You must check this box!',
+            'avatar'      => 'Pick a file',
+            'avatar2'     => 'This file is required',
         ]);
 })->name('form-submit');

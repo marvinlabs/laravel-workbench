@@ -48,31 +48,46 @@
 
         <h1>Control sizes</h1>
 
-        {{ bs()->text('large', 'Large')->sizeLarge() }}
-        {{ bs()->text('normal', 'Normal') }}
-        {{ bs()->text('small', 'Small')->sizeSmall() }}
+        {{ bs()->formGroup()->control(
+                bs()->text('large', 'Large')->sizeLarge()) }}
+
+        {{ bs()->formGroup()->control(
+                bs()->text('normal', 'Normal')) }}
+
+        {{ bs()->formGroup()->control(
+                bs()->text('small', 'Small')->sizeSmall()) }}
 
         <h1>Input groups</h1>
 
-        {{ bs()->formGroup()
-                ->control(bs()->inputGroup(bs()->text('first_name', '20.00'))->prefix('$')->prefix('0.00')) }}
-        {{ bs()->formGroup()
-                ->control(bs()->inputGroup(bs()->text('first_name', '20'), '$', '0.00')) }}
+        {{ bs()->formGroup()->control(
+                bs()->inputGroup(bs()->text('first_name', '20.00'))->prefix('$')->prefix('0.00')) }}
+
+        {{ bs()->formGroup()->control(
+                bs()->inputGroup(bs()->text('first_name', '20'), '$', '0.00')) }}
 
         <h1>Read only</h1>
 
-        {{ bs()->text('readonly', 'Read only')->readOnly() }}
-        {{ bs()->text('plaintext', 'Read only and show as plain text')->readOnly(true) }}
+        {{ bs()->formGroup()->control(
+                bs()->text('readonly', 'Read only')->readOnly()) }}
+
+        {{ bs()->formGroup()->control(
+                bs()->text('plaintext', 'Read only and show as plain text')->readOnly(true)) }}
 
         <h1>Text areas</h1>
 
-        {{ bs()->textarea('textarea', 'Lorem ipsum blah blah blah') }}
-        {{ bs()->text('plaintext', 'Read only and show as plain text')->readOnly(true) }}
-        {{ bs()->textarea('textarea_ro', 'This one is read only')->disabled() }}
+        {{ bs()->formGroup()->control(
+                bs()->textarea('textarea', 'Lorem ipsum blah blah blah')) }}
+
+        {{ bs()->formGroup()->control(
+                bs()->text('plaintext', 'Read only and show as plain text')->readOnly(true)) }}
+
+        {{ bs()->formGroup()->control(
+                bs()->textarea('textarea_ro', 'This one is read only')->disabled()) }}
 
         <h1>Files</h1>
 
-        {{ bs()->file('textarea') }}
+        {{ bs()->formGroup()->control(bs()->file('avatar')) }}
+        {{ bs()->formGroup()->control(bs()->customFile('avatar2')) }}
 
         <h1>Select</h1>
 
