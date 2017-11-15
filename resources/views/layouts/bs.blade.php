@@ -7,6 +7,7 @@
 
     <title>@yield('page.title', 'Laravel Workbench')</title>
 
+    {!! fa()->css() !!}
     {!! bs()->css() !!}
     @stack('head.styles')
 

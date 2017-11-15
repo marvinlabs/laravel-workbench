@@ -8,32 +8,32 @@
 
         {{ bs()->openForm('put', route('form-submit', [$category])) }}
 
-        {{ bs()->formGroup(bs()->text('first_name', 'John'), 'First name', 'Help text provided directly') }}
-        {{ bs()->formGroup(bs()->text('last_name', 'Doe')) }}
-        {{ bs()->email('email')->placeholder( 'Your email address') }}
+        {{ bs()->formGroup(bs()->text('first_name', 'John'))
+                ->label('First name')
+                ->helpText('This is some help text') }}
+
+        {{ bs()->formGroup()
+                ->control(bs()->inputGroup()
+                        ->suffixWith(fa()->icon('user'))
+                        ->control(bs()->text('last_name', 'Doe')))
+                ->label('Last name') }}
+
+        {{ bs()->formGroup(bs()->email('email')->placeholder('Your email address'))
+                ->label('Email') }}
+
         {{ bs()->submit('Register') }}
 
         {{ bs()->closeForm() }}
 
-        <h1>Another simple form</h1>
-
-        {{ bs()->openForm('get', route('form-submit', [$category])) }}
-
-
-        {{ bs()->closeForm() }}
-
-
         <h1>Inline form</h1>
 
         {{ bs()->openForm('get', route('form-submit', [$category]), ['inline' => true]) }}
-        <label class="sr-only" for="inlineFormInputName2">Name</label>
-        <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInputName2" placeholder="Jane Doe">
 
-        <label class="sr-only" for="inlineFormInputGroupUsername2">Username</label>
-        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-            <div class="input-group-addon">@</div>
-            <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Username">
-        </div>
+        {{ bs()->formGroup(bs()->text('first_name', 'John')->addClass('mb-2 mr-sm-2 mb-sm-0'))
+                ->label('First name', true) }}
+
+        {{ bs()->formGroup(bs()->inputGroup(bs()->text('username', 'johndoe')->addClass('mb-2 mr-sm-2 mb-sm-0'), '@'))
+                ->label('Username', true) }}
 
         <div class="form-check mb-2 mr-sm-2 mb-sm-0">
             <label class="form-check-label">
@@ -49,6 +49,11 @@
         {{ bs()->text('large', 'Large')->sizeLarge() }}
         {{ bs()->text('normal', 'Normal') }}
         {{ bs()->text('small', 'Small')->sizeSmall() }}
+
+        <h1>Input groups</h1>
+
+        {{ bs()->inputGroup(bs()->text('first_name', '20.00'), ['$', '0.00']) }}
+        {{ bs()->inputGroup(bs()->text('first_name', '20'), '$', '0.00') }}
 
         <h1>Read only</h1>
 
