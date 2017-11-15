@@ -19,17 +19,16 @@ Route::get('/font-awesome', function () {
 
 Route::get('/bootstrap-4/{category}', function ($category) {
     return view("laravel-html-bootstrap-4.{$category}")
-        ->withCategory($category)
-        ->withErrors([
-            'first_name' => 'The first name is required',
-            'email'      => 'This is a sample error for emails',
-        ]);
+        ->withCategory($category);
 });
 
 Route::match(['post', 'put'], '/bootstrap-4/{category}', function ($category) {
     return redirect()->back()
         ->withInput()
         ->withErrors([
-            'last_name' => 'Now there is an error on the last name',
+            'first_name'  => 'The first name is required',
+            'last_name'   => 'The last name is required',
+            'email'       => 'This is a sample error for emails',
+            'agree_terms' => 'You must check this box!',
         ]);
 })->name('form-submit');

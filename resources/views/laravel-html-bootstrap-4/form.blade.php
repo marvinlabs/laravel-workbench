@@ -21,13 +21,15 @@
         {{ bs()->formGroup(bs()->email('email')->placeholder('Your email address'))
                 ->label('Email') }}
 
+        {{ bs()->formGroup(bs()->checkBox('agree_terms', 'You have read and accept our terms and conditions')) }}
+
         {{ bs()->submit('Register') }}
 
         {{ bs()->closeForm() }}
 
         <h1>Inline form</h1>
 
-        {{ bs()->openForm('get', route('form-submit', [$category]), ['inline' => true]) }}
+        {{ bs()->openForm('get', route('form-submit', [$category]), ['inline' => true, 'hideErrors' => true]) }}
 
         {{ bs()->formGroup(bs()->text('first_name', 'John')->addClass('mb-2 mr-sm-2 mb-sm-0'))
                 ->label('First name', true) }}
