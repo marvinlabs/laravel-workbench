@@ -14,7 +14,7 @@
 
         {{ bs()->formGroup()
                 ->control(bs()->inputGroup()
-                        ->suffixWith(fa()->icon('user'))
+                        ->suffix(fa()->icon('user'))
                         ->control(bs()->text('last_name', 'Doe')))
                 ->label('Last name') }}
 
@@ -52,8 +52,10 @@
 
         <h1>Input groups</h1>
 
-        {{ bs()->inputGroup(bs()->text('first_name', '20.00'), ['$', '0.00']) }}
-        {{ bs()->inputGroup(bs()->text('first_name', '20'), '$', '0.00') }}
+        {{ bs()->formGroup()
+                ->control(bs()->inputGroup(bs()->text('first_name', '20.00'))->prefix('$')->prefix('0.00')) }}
+        {{ bs()->formGroup()
+                ->control(bs()->inputGroup(bs()->text('first_name', '20'), '$', '0.00')) }}
 
         <h1>Read only</h1>
 
