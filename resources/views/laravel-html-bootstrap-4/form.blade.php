@@ -29,7 +29,7 @@
 
         <h1>Inline form</h1>
 
-        {{ bs()->openForm('get', route('form-submit', [$category]), ['inline' => true, 'hideErrors' => true]) }}
+        {{ bs()->openForm('put', route('form-submit', [$category]), ['inline' => true, 'hideErrors' => true]) }}
 
         {{ bs()->formGroup(bs()->text('first_name', 'John')->addClass('mb-2 mr-sm-2 mb-sm-0'))
                 ->label('First name', true) }}
@@ -37,13 +37,10 @@
         {{ bs()->formGroup(bs()->inputGroup(bs()->text('username', 'johndoe')->addClass('mb-2 mr-sm-2 mb-sm-0'), '@'))
                 ->label('Username', true) }}
 
-        <div class="form-check mb-2 mr-sm-2 mb-sm-0">
-            <label class="form-check-label">
-                <input class="form-check-input" type="checkbox"> Remember me
-            </label>
-        </div>
+        {{ bs()->checkBox('remember', 'Remember me')->addClass('mb-2 mr-sm-2 mb-sm-0') }}
 
-        <button type="submit" class="btn btn-primary">Submit</button>
+        {{ bs()->submit('Submit', 'secondary')->child(fa()->icon('send')->addClass('ml-2')) }}
+
         {{ bs()->closeForm() }}
 
         <h1>Control sizes</h1>
@@ -91,8 +88,11 @@
 
         <h1>Select</h1>
 
-        {{ bs()->select('select', ['FR' => 'France', 'S' => 'Sweden', 'P' => 'Portugal'], 'P') }}
-        {{ bs()->select('select_ro', ['FR' => 'France', 'S' => 'Sweden', 'P' => 'Portugal'], 'P')->disabled() }}
+        {{ bs()->formGroup()->control(
+                bs()->select('select', ['FR' => 'France', 'S' => 'Sweden', 'P' => 'Portugal'], 'P')) }}
+
+        {{ bs()->formGroup()->control(
+                bs()->select('select_ro', ['FR' => 'France', 'S' => 'Sweden', 'P' => 'Portugal'], 'P')->disabled()) }}
 
 
     </div>
