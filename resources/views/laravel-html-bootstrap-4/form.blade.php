@@ -8,8 +8,8 @@
 
         {{ bs()->openForm('put', route('form-submit', [$category])) }}
 
-        {{ bs()->text('first_name', 'John') }}
-        {{ bs()->text('last_name', 'Doe') }}
+        {{ bs()->formGroup(bs()->text('first_name', 'John'), 'First name', 'Help text provided directly') }}
+        {{ bs()->formGroup(bs()->text('last_name', 'Doe')) }}
         {{ bs()->email('email')->placeholder( 'Your email address') }}
         {{ bs()->submit('Register') }}
 
