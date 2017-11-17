@@ -744,7 +744,7 @@
             "dist": {
                 "type": "path",
                 "url": "packages/marvinlabs/laravel-html-bootstrap-4",
-                "reference": "f5629e619092c602cf304dc3644f47e2f3aacf7d",
+                "reference": "275730d1e9f677fc72586f1654f6f8d9e0cf6aae",
                 "shasum": null
             },
             "require": {
