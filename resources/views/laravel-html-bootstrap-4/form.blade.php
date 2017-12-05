@@ -43,6 +43,31 @@
 
         {{ bs()->closeForm() }}
 
+        <h1>Horizontal form</h1>
+
+        {{ bs()->openForm('put', route('form-submit', [$category])) }}
+
+        {{ bs()->formGroup(bs()->text('first_name', 'John'))
+                ->wrapControlIn(bs()->div()->addClass('col-sm-10'))
+                ->label('First name', false, ['col-sm-2'])
+                ->addClass('row')}}
+
+        {{ bs()->formGroup(bs()->inputGroup(bs()->text('username', 'johndoe'), '@'))
+                ->wrapControlIn(bs()->div()->addClass('col-sm-10'))
+                ->label('Username', false, ['col-sm-2'])
+                ->addClass('row')}}
+
+        {{ bs()->formGroup(bs()->checkBox('remember', 'Remember me'))
+                ->wrapControlIn(bs()->div()->addClass('col-sm-10 offset-sm-2'))
+                ->label('Remember me', true, ['col-sm-2'])
+                ->addClass('row')}}
+
+        {{ bs()->formGroup(bs()->submit('Submit', 'secondary')->child(fa()->icon('send')->addClass('ml-2')))
+                ->wrapControlIn(bs()->div()->addClass('col-sm-10 offset-sm-2'))
+                ->addClass('row')}}
+
+        {{ bs()->closeForm() }}
+
         <h1>Control sizes</h1>
 
         {{ bs()->formGroup()->control(
