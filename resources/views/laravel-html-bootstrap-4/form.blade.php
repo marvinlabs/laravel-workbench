@@ -56,11 +56,13 @@
         {{-- Create a row using the default configuration entry: config('bs4.form_rows.default') --}}
         {{ bs()->formGroup(bs()->inputGroup(bs()->text('username', 'johndoe'), '@'))
                 ->label('Username', false)
+                ->helpText('Your username here')
                 ->showAsRow() }}
 
         {{-- Create a row using a custom configuration entry: config('bs4.form_rows.no_label') --}}
-        {{ bs()->formGroup(bs()->checkBox('remember', 'Remember me'))
+        {{ bs()->formGroup(bs()->checkBox('remember2', 'Remember me'))
                 ->label('Remember me', true)
+                ->helpText('We need a d-block extra class for checkbox controls help text...', true, true, 'd-block')
                 ->showAsRow('no_label')}}
 
         {{ bs()->formGroup(bs()->submit('Submit', 'secondary')->child(fa()->icon('send')->addClass('ml-2')))
