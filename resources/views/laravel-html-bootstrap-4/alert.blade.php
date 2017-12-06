@@ -4,7 +4,7 @@
 
 @section('page.body')
     <div class="container">
-        <h1>Alerts</h1>
+        <h1 class="mt-5 mb-4">Alerts</h1>
 
         @component('bs::alert', ['type' => 'danger'])
             A simple alert of danger type

@@ -6,7 +6,7 @@
 
     <div class="container">
 
-        <h1>Badges</h1>
+        <h1 class="mt-5 mb-4">Badges</h1>
 
         <p>
         {!! bs()->badge()->text('Secondary by default') !!}
@@ -18,7 +18,7 @@
             @endforeach
         </p>
 
-        <h1>Badges with links</h1>
+        <h1 class="mt-5 mb-4">Badges with links</h1>
 
         <p>
             @foreach (['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'light', 'dark'] as $type)

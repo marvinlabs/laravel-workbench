@@ -4,7 +4,7 @@
 
 @section('page.body')
     <div class="container">
-        <h1>Simple form</h1>
+        <h1 class="mt-5 mb-4">Simple form</h1>
 
         {{ bs()->openForm('put', route('form-submit', [$category])) }}
 
@@ -27,7 +27,7 @@
 
         {{ bs()->closeForm() }}
 
-        <h1>Inline form</h1>
+        <h1 class="mt-5 mb-4">Inline form</h1>
 
         {{ bs()->openForm('put', route('form-submit', [$category]), ['inline' => true, 'hideErrors' => true]) }}
 
@@ -43,32 +43,32 @@
 
         {{ bs()->closeForm() }}
 
-        <h1>Horizontal form</h1>
+        <h1 class="mt-5 mb-4">Horizontal form</h1>
 
         {{ bs()->openForm('put', route('form-submit', [$category])) }}
 
+        {{-- Manually create a row --}}
         {{ bs()->formGroup(bs()->text('first_name', 'John'))
                 ->wrapControlIn(bs()->div()->addClass('col-sm-10'))
                 ->label('First name', false, ['col-sm-2'])
                 ->addClass('row')}}
 
+        {{-- Create a row using the default configuration entry: config('bs4.form_rows.default') --}}
         {{ bs()->formGroup(bs()->inputGroup(bs()->text('username', 'johndoe'), '@'))
-                ->wrapControlIn(bs()->div()->addClass('col-sm-10'))
-                ->label('Username', false, ['col-sm-2'])
-                ->addClass('row')}}
+                ->label('Username', false)
+                ->showAsRow() }}
 
+        {{-- Create a row using a custom configuration entry: config('bs4.form_rows.no_label') --}}
         {{ bs()->formGroup(bs()->checkBox('remember', 'Remember me'))
-                ->wrapControlIn(bs()->div()->addClass('col-sm-10 offset-sm-2'))
-                ->label('Remember me', true, ['col-sm-2'])
-                ->addClass('row')}}
+                ->label('Remember me', true)
+                ->showAsRow('no_label')}}
 
         {{ bs()->formGroup(bs()->submit('Submit', 'secondary')->child(fa()->icon('send')->addClass('ml-2')))
-                ->wrapControlIn(bs()->div()->addClass('col-sm-10 offset-sm-2'))
-                ->addClass('row')}}
+                ->showAsRow('centered')}}
 
         {{ bs()->closeForm() }}
 
-        <h1>Control sizes</h1>
+        <h1 class="mt-5 mb-4">Control sizes</h1>
 
         {{ bs()->formGroup()->control(
                 bs()->text('large', 'Large')->sizeLarge()) }}
@@ -79,7 +79,7 @@
         {{ bs()->formGroup()->control(
                 bs()->text('small', 'Small')->sizeSmall()) }}
 
-        <h1>Input groups</h1>
+        <h1 class="mt-5 mb-4">Input groups</h1>
 
         {{ bs()->formGroup()->control(
                 bs()->inputGroup(bs()->text('first_name', '20.00'))->prefix('$')->prefix('0.00')) }}
@@ -87,7 +87,7 @@
         {{ bs()->formGroup()->control(
                 bs()->inputGroup(bs()->text('first_name', '20'), '$', '0.00')) }}
 
-        <h1>Read only</h1>
+        <h1 class="mt-5 mb-4">Read only</h1>
 
         {{ bs()->formGroup()->control(
                 bs()->text('readonly', 'Read only')->readOnly()) }}
@@ -95,7 +95,7 @@
         {{ bs()->formGroup()->control(
                 bs()->text('plaintext', 'Read only and show as plain text')->readOnly(true)) }}
 
-        <h1>Text areas</h1>
+        <h1 class="mt-5 mb-4">Text areas</h1>
 
         {{ bs()->formGroup()->control(
                 bs()->textarea('textarea', 'Lorem ipsum blah blah blah')) }}
@@ -106,12 +106,12 @@
         {{ bs()->formGroup()->control(
                 bs()->textarea('textarea_ro', 'This one is read only')->disabled()) }}
 
-        <h1>Files</h1>
+        <h1 class="mt-5 mb-4">Files</h1>
 
         {{ bs()->formGroup()->control(bs()->file('avatar')) }}
         {{ bs()->formGroup()->control(bs()->customFile('avatar2')) }}
 
-        <h1>Select</h1>
+        <h1 class="mt-5 mb-4">Select</h1>
 
         {{ bs()->formGroup()->control(
                 bs()->select('select', ['FR' => 'France', 'S' => 'Sweden', 'P' => 'Portugal'], 'P')) }}
