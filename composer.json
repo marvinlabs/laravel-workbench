@@ -12,6 +12,7 @@
         "fideloper/proxy" : "~3.3",
         "laravel/framework" : "5.5.*",
         "laravel/tinker" : "~1.0",
+        "marvinlabs/laravel-menus" : "@dev",
         "marvinlabs/laravel-html-font-awesome" : "@dev",
         "marvinlabs/laravel-html-bootstrap-4": "@dev"
     },
@@ -37,7 +38,8 @@
     "autoload-dev" : {
         "psr-4" : {
             "Tests\\" : "tests/",
-            "MarvinLabs\\Html\\Bootstrap\\Tests\\" : "packages/marvinlabs/laravel-html-bootstrap-4/tests"
+            "MarvinLabs\\Html\\Bootstrap\\Tests\\" : "packages/marvinlabs/laravel-html-bootstrap-4/tests",
+            "MarvinLabs\\Menus\\Tests\\" : "packages/marvinlabs/laravel-menus/tests"
         }
     },
     "extra" : {
@@ -71,6 +73,10 @@
         {
             "type" : "path",
             "url" : "packages/marvinlabs/laravel-html-bootstrap-4"
+        },
+        {
+            "type" : "path",
+            "url" : "packages/marvinlabs/laravel-menus"
         }
     ]
 }
