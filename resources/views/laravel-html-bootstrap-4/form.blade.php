@@ -84,10 +84,18 @@
         <h1 class="mt-5 mb-4">Input groups</h1>
 
         {{ bs()->formGroup()->control(
-                bs()->inputGroup(bs()->text('first_name', '20.00'))->prefix('$')->prefix('0.00')) }}
+                bs()->inputGroup(bs()->text('amount', '20.00'))->prefix('$')->prefix('0.00')) }}
 
         {{ bs()->formGroup()->control(
-                bs()->inputGroup(bs()->text('first_name', '20'), '$', '0.00')) }}
+                bs()->inputGroup(bs()->text('amount', '20'), '$', '0.00')) }}
+
+        {{ bs()->formGroup()->control(
+                bs()->inputGroup(bs()->text('amount', '20'))
+                    ->suffix(bs()->button('Click me', 'secondary', true), false)) }}
+
+        {{ bs()->formGroup()->control(
+                bs()->inputGroup(bs()->text('xl_ig', 'This is a large input group'), '$', '0.00')
+                    ->sizeLarge()) }}
 
         <h1 class="mt-5 mb-4">Read only</h1>
 
