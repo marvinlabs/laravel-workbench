@@ -62,7 +62,7 @@
         {{-- Create a row using a custom configuration entry: config('bs4.form_rows.no_label') --}}
         {{ bs()->formGroup(bs()->checkBox('remember2', 'Remember me'))
                 ->label('Remember me', true)
-                ->helpText('We need a d-block extra class for checkbox controls help text...', true, true, 'd-block')
+                ->helpText('This is the checkbox control help text...')
                 ->showAsRow('no_label')}}
 
         {{ bs()->formGroup(bs()->submit('Submit', 'secondary')->child(fa()->icon('send')->addClass('ml-2')))
