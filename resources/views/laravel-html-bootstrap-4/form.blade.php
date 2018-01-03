@@ -39,6 +39,8 @@
 
         {{ bs()->checkBox('remember', 'Remember me')->addClass('mb-2 mr-sm-2 mb-sm-0') }}
 
+        {{ bs()->checkBox('remember_disabled', 'Forget me (disabled)')->disabled()->addClass('mb-2 mr-sm-2 mb-sm-0') }}
+
         {{ bs()->submit('Submit', 'secondary')->child(fa()->icon('send')->addClass('ml-2')) }}
 
         {{ bs()->closeForm() }}
