@@ -22,6 +22,11 @@ Route::get('/bootstrap-4/{category}', function ($category) {
         ->withCategory($category);
 });
 
+Route::get('/menus/{category}', function ($category) {
+    return view("laravel-menus.{$category}")
+        ->withCategory($category);
+});
+
 Route::match(['post', 'put'], '/bootstrap-4/{category}', function ($category) {
     return redirect()->back()
         ->withInput()
