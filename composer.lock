@@ -921,7 +921,7 @@
             "dist": {
                 "type": "path",
                 "url": "packages/marvinlabs/laravel-menus",
-                "reference": "dbfe630f1c2caac8cef28f03d102862035495451",
+                "reference": "5e1220542a8474d8c1dc63b860cc4b2ec86ff336",
                 "shasum": null
             },
             "require": {
