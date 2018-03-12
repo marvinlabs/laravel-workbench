@@ -8,23 +8,25 @@
     "license" : "MIT",
     "type" : "project",
     "require" : {
-        "php" : ">=7.0.0",
-        "fideloper/proxy" : "~3.3",
-        "laravel/framework" : "5.5.*",
+        "roave/security-advisories": "dev-master",
+        "php" : ">=7.2.0",
+        "fideloper/proxy" : "~4.0",
+        "laravel/framework" : "5.6.4",
         "laravel/tinker" : "~1.0",
         "marvinlabs/laravel-menus" : "@dev",
         "marvinlabs/laravel-html-font-awesome" : "@dev",
-        "marvinlabs/laravel-html-bootstrap-4": "@dev"
+        "marvinlabs/laravel-html-bootstrap-4": "@dev",
+        "spatie/laravel-model-status": "@dev"
     },
     "require-dev" : {
         "barryvdh/laravel-debugbar" : "^3.1",
         "barryvdh/laravel-ide-helper" : "^2.4",
         "filp/whoops" : "~2.0",
         "fzaninotto/faker" : "~1.4",
-        "laravel/homestead" : "^6.5",
+        "laravel/homestead" : "^7.0",
         "mockery/mockery" : "0.9.*",
-        "phpunit/phpunit" : "~6.4",
-        "orchestra/testbench": "~3.5"
+        "phpunit/phpunit" : "~7.0",
+        "orchestra/testbench": "~3.6"
     },
     "autoload" : {
         "classmap" : [
@@ -39,7 +41,8 @@
         "psr-4" : {
             "Tests\\" : "tests/",
             "MarvinLabs\\Html\\Bootstrap\\Tests\\" : "packages/marvinlabs/laravel-html-bootstrap-4/tests",
-            "MarvinLabs\\Menus\\Tests\\" : "packages/marvinlabs/laravel-menus/tests"
+            "MarvinLabs\\Menus\\Tests\\" : "packages/marvinlabs/laravel-menus/tests",
+            "Spatie\\ModelStatus\\Tests\\": "packages/spatie/laravel-model-status/tests"
         }
     },
     "extra" : {
@@ -77,6 +80,10 @@
         {
             "type" : "path",
             "url" : "packages/marvinlabs/laravel-menus"
+        },
+        {
+            "type" : "path",
+            "url" : "packages/spatie/laravel-model-status"
         }
     ]
 }
