@@ -6,7 +6,7 @@ use MarvinLabs\Menus\Presenters\Html\RawHtmlPresenter;
 use MarvinLabs\Menus\Support\Links\UrlLink;
 use MarvinLabs\Menus\Support\Links\VoidLink;
 
-Menu::make('html', function($menu) {
+Menu::make('html', function(\MarvinLabs\Menus\Menu\Menu $menu) {
     $menu->setPresenter(new RawHtmlPresenter());
 
     $menu->addHeading('Item 1', 3);

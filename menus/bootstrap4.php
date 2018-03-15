@@ -1,11 +1,22 @@
 <?php
 
 use MarvinLabs\Menus\Facades\Menu;
+use MarvinLabs\Menus\Menu\Items\Heading;
+use MarvinLabs\Menus\Menu\Items\Link;
+use MarvinLabs\Menus\Presenters\Bootstrap4\NavbarNavPresenter;
+use MarvinLabs\Menus\Support\Links\UrlLink;
+use MarvinLabs\Menus\Support\Links\VoidLink;
 
-Menu::make('bs4.topbar', function($menu) {
+Menu::make('navbar-nav', function(\MarvinLabs\Menus\Menu\Menu $menu) {
+    $menu->setPresenter(new NavbarNavPresenter());
 
-});
-
-Menu::make('bs4.sidebar', function($menu) {
-
+    $menu->addLink('Item 1', new VoidLink());
+    $menu->addLink('Item 2', new VoidLink(), function (Link $item) {
+        $item->addLink('Item 2.1', new VoidLink());
+        $item->addLink('Item 2.2', new UrlLink('/test'));
+        $item->addDivider();
+        $item->addLink('Item 2.3', new UrlLink('/test'));
+    });
+    $menu->addDivider();
+    $menu->addLink('Item 3', new VoidLink());
 });
