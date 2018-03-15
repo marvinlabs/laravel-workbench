@@ -25,7 +25,7 @@ Route::get('/bootstrap-4/{category}', function ($category) {
 Route::get('/menus/{category}', function ($category) {
     return view("laravel-menus.{$category}")
         ->withCategory($category);
-});
+})->name('demo.menu');
 
 Route::match(['post', 'put'], '/bootstrap-4/{category}', function ($category) {
     return redirect()->back()
