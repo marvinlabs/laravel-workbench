@@ -8,7 +8,7 @@ use MarvinLabs\Menus\Support\Links\UrlLink;
 use MarvinLabs\Menus\Support\Links\VoidLink;
 
 Menu::make('navbar-nav', function(\MarvinLabs\Menus\Menu\Menu $menu) {
-    $menu->setPresenter(new NavbarNavPresenter());
+    $menu->setPresenter(new NavbarNavPresenter('ml-auto'));
 
     $menu->addLink('Item 1', new VoidLink());
     $menu->addLink('Item 2', new VoidLink(), function (Link $item) {
