@@ -18,6 +18,5 @@ Menu::make('navbar-nav', function(\MarvinLabs\Menus\Menu\Menu $menu) {
         $item->addDivider();
         $item->addLink('Item 2.3', new RouteLink('demo.menu', ['category' => 'bs4']));
     });
-    $menu->addDivider();
     $menu->addLink('Item 3', new RouteLink('demo.menu', ['category' => 'bs4']));
 });

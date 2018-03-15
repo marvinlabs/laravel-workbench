@@ -12,6 +12,12 @@
 
             {!! Menu::render('navbar-nav') !!}
         </nav>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <a href="#" class="navbar-brand">Navbar</a>
+
+            @menu('navbar-nav')
+        </nav>
     </div>
 
 @endsection
