@@ -6,11 +6,12 @@
 
     <h1>Bootstrap 4 presenter</h1>
 
-        <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a href="#" class="navbar-brand">Navbar</a>
 
             {!! Menu::render('navbar-nav') !!}
         </nav>
-
+    </div>
 
 @endsection
