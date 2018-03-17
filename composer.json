@@ -15,8 +15,7 @@
     "laravel/tinker": "~1.0",
     "marvinlabs/laravel-menus": "@dev",
     "marvinlabs/laravel-html-font-awesome": "@dev",
-    "marvinlabs/laravel-html-bootstrap-4": "@dev",
-    "spatie/laravel-model-status": "@dev"
+    "marvinlabs/laravel-html-bootstrap-4": "@dev"
   },
   "require-dev": {
     "barryvdh/laravel-debugbar": "^3.1",
@@ -41,8 +40,7 @@
     "psr-4": {
       "Tests\\": "tests/",
       "MarvinLabs\\Html\\Bootstrap\\Tests\\": "packages/marvinlabs/laravel-html-bootstrap-4/tests",
-      "MarvinLabs\\Menus\\Tests\\": "packages/marvinlabs/laravel-menus/tests",
-      "Spatie\\ModelStatus\\Tests\\": "packages/spatie/laravel-model-status/tests"
+      "MarvinLabs\\Menus\\Tests\\": "packages/marvinlabs/laravel-menus/tests"
     }
   },
   "extra": {
@@ -80,10 +78,6 @@
     {
       "type": "path",
       "url": "packages/marvinlabs/laravel-menus"
-    },
-    {
-      "type": "path",
-      "url": "packages/spatie/laravel-model-status"
     }
   ]
 }

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "e5e741d87e84867c3aa8a36c4d924396",
+    "content-hash": "2e8ccd3d9a95608c2b391f2f99c4f12c",
     "packages": [
         {
             "name": "appstract/laravel-blade-directives",
@@ -508,27 +508,27 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.6.4",
+            "version": "v5.6.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "ca5ce9e559e1a8f6455f0fbc42638e6e066f73de"
+                "reference": "82d8165d1ea86bdd81ddfa1db9343fa19e7d1450"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/ca5ce9e559e1a8f6455f0fbc42638e6e066f73de",
-                "reference": "ca5ce9e559e1a8f6455f0fbc42638e6e066f73de",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/82d8165d1ea86bdd81ddfa1db9343fa19e7d1450",
+                "reference": "82d8165d1ea86bdd81ddfa1db9343fa19e7d1450",
                 "shasum": ""
             },
             "require": {
                 "doctrine/inflector": "~1.1",
                 "dragonmantank/cron-expression": "~2.0",
-                "erusev/parsedown": "~1.6",
+                "erusev/parsedown": "~1.7",
                 "ext-mbstring": "*",
                 "ext-openssl": "*",
-                "league/flysystem": "~1.0",
+                "league/flysystem": "^1.0.8",
                 "monolog/monolog": "~1.12",
-                "nesbot/carbon": "^1.22.1",
+                "nesbot/carbon": "^1.24.1",
                 "php": "^7.1.3",
                 "psr/container": "~1.0",
                 "psr/simple-cache": "^1.0",
@@ -544,6 +544,9 @@
                 "symfony/var-dumper": "~4.0",
                 "tijsverkoyen/css-to-inline-styles": "^2.2.1",
                 "vlucas/phpdotenv": "~2.2"
+            },
+            "conflict": {
+                "tightenco/collect": "<5.5.33"
             },
             "replace": {
                 "illuminate/auth": "self.version",
@@ -573,8 +576,7 @@
                 "illuminate/support": "self.version",
                 "illuminate/translation": "self.version",
                 "illuminate/validation": "self.version",
-                "illuminate/view": "self.version",
-                "tightenco/collect": "<5.5.33"
+                "illuminate/view": "self.version"
             },
             "require-dev": {
                 "aws/aws-sdk-php": "~3.0",
@@ -600,6 +602,7 @@
                 "league/flysystem-aws-s3-v3": "Required to use the Flysystem S3 driver (~1.0).",
                 "league/flysystem-cached-adapter": "Required to use Flysystem caching (~1.0).",
                 "league/flysystem-rackspace": "Required to use the Flysystem Rackspace driver (~1.0).",
+                "league/flysystem-sftp": "Required to use the Flysystem SFTP driver (~1.0).",
                 "nexmo/client": "Required to use the Nexmo transport (~1.0).",
                 "pda/pheanstalk": "Required to use the beanstalk queue driver (~3.0).",
                 "predis/predis": "Required to use the redis cache and queue drivers (~1.0).",
@@ -639,7 +642,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2018-02-21T14:41:25+00:00"
+            "time": "2018-03-14T17:29:38+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -794,7 +797,7 @@
             "dist": {
                 "type": "path",
                 "url": "packages/marvinlabs/laravel-html-bootstrap-4",
-                "reference": "aa00f94afa1f7bcd56f8dc66f0c2c95b249dbcb7",
+                "reference": "ed98b305e6913862e6025819ac5db82de5777242",
                 "shasum": null
             },
             "require": {
@@ -921,13 +924,12 @@
             "dist": {
                 "type": "path",
                 "url": "packages/marvinlabs/laravel-menus",
-                "reference": "5e1220542a8474d8c1dc63b860cc4b2ec86ff336",
+                "reference": "6f1690017d045048ecd0192012ca057b05e381ed",
                 "shasum": null
             },
             "require": {
-                "illuminate/config": "5.6.*",
-                "illuminate/support": "5.6.*",
-                "php": "^7.0",
+                "illuminate/support": ">=5.5",
+                "php": ">=7.0",
                 "spatie/laravel-html": "~2.10.0"
             },
             "require-dev": {
@@ -949,10 +951,7 @@
             "autoload": {
                 "psr-4": {
                     "MarvinLabs\\Menus\\": "src/Menus"
-                },
-                "files": [
-                    "src/helpers.php"
-                ]
+                }
             },
             "autoload-dev": {
                 "psr-4": {
@@ -1519,18 +1518,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "664836e89c7ecad3dbaabc1572ea752c0d532d80"
+                "reference": "1b2f1f59ff8fc933e4d61ee45214ff3228e20c75"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/664836e89c7ecad3dbaabc1572ea752c0d532d80",
-                "reference": "664836e89c7ecad3dbaabc1572ea752c0d532d80",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/1b2f1f59ff8fc933e4d61ee45214ff3228e20c75",
+                "reference": "1b2f1f59ff8fc933e4d61ee45214ff3228e20c75",
                 "shasum": ""
             },
             "conflict": {
                 "3f/pygmentize": "<1.2",
                 "adodb/adodb-php": "<5.20.6",
                 "amphp/artax": "<1.0.6|>=2,<2.0.6",
+                "amphp/http": "<1.0.1",
                 "asymmetricrypt/asymmetricrypt": ">=0,<9.9.99",
                 "aws/aws-sdk-php": ">=3,<3.2.1",
                 "bugsnag/bugsnag-laravel": ">=2,<2.0.2",
@@ -1617,7 +1617,7 @@
                 "symfony/web-profiler-bundle": ">=2,<2.3.19|>=2.4,<2.4.9|>=2.5,<2.5.4",
                 "symfony/yaml": ">=2,<2.0.22|>=2.1,<2.1.7",
                 "thelia/backoffice-default-template": ">=2.1,<2.1.2",
-                "thelia/thelia": ">=2.1,<2.1.2|>=2.1.0-beta1,<2.1.3",
+                "thelia/thelia": ">=2.1.0-beta1,<2.1.3|>=2.1,<2.1.2",
                 "titon/framework": ">=0,<9.9.99",
                 "twig/twig": "<1.20",
                 "typo3/cms": ">=6.2,<6.2.30|>=7,<7.6.22|>=8,<8.7.5",
@@ -1667,7 +1667,7 @@
                 }
             ],
             "description": "Prevents installation of composer packages with known security vulnerabilities: no API, simply require it",
-            "time": "2018-03-07T15:45:44+00:00"
+            "time": "2018-03-15T17:53:05+00:00"
         },
         {
             "name": "spatie/laravel-html",
@@ -1736,73 +1736,6 @@
                 "spatie"
             ],
             "time": "2018-01-09T10:10:04+00:00"
-        },
-        {
-            "name": "spatie/laravel-model-status",
-            "version": "9999999-dev",
-            "dist": {
-                "type": "path",
-                "url": "packages/spatie/laravel-model-status",
-                "reference": "8717bc9ac1b771b991db46350a44fd2fad2e1852",
-                "shasum": null
-            },
-            "require": {
-                "illuminate/support": "~5.5.0|~5.6.0",
-                "php": "^7.1"
-            },
-            "require-dev": {
-                "orchestra/testbench": "~3.5.0|~3.6.0",
-                "phpunit/phpunit": "^6.5|^7.0"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Spatie\\ModelStatus\\ModelStatusServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Spatie\\ModelStatus\\": "src"
-                }
-            },
-            "autoload-dev": {
-                "psr-4": {
-                    "Spatie\\ModelStatus\\Tests\\": "tests"
-                }
-            },
-            "scripts": {
-                "test": [
-                    "vendor/bin/phpunit"
-                ],
-                "test-coverage": [
-                    "phpunit --coverage-html coverage"
-                ]
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Thomas Verhelst",
-                    "email": "tvke91@gmail.com",
-                    "homepage": "https://spatie.be",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Freek Van der Herten",
-                    "email": "freek@spatie.be",
-                    "homepage": "https://spatie.be",
-                    "role": "Developer"
-                }
-            ],
-            "description": "A package to enable assigning statuses to Eloquent Models",
-            "homepage": "https://github.com/spatie/laravel-model-status",
-            "keywords": [
-                "laravel-status",
-                "spatie"
-            ]
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -2766,16 +2699,16 @@
     "packages-dev": [
         {
             "name": "barryvdh/laravel-debugbar",
-            "version": "v3.1.3",
+            "version": "v3.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/barryvdh/laravel-debugbar.git",
-                "reference": "664fa434e26febf04d60df0368303cf0fe14f63a"
+                "reference": "7a91480cc6e597caed5117a3c5d685f06d35c5a1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/barryvdh/laravel-debugbar/zipball/664fa434e26febf04d60df0368303cf0fe14f63a",
-                "reference": "664fa434e26febf04d60df0368303cf0fe14f63a",
+                "url": "https://api.github.com/repos/barryvdh/laravel-debugbar/zipball/7a91480cc6e597caed5117a3c5d685f06d35c5a1",
+                "reference": "7a91480cc6e597caed5117a3c5d685f06d35c5a1",
                 "shasum": ""
             },
             "require": {
@@ -2830,7 +2763,7 @@
                 "profiler",
                 "webprofiler"
             ],
-            "time": "2018-02-25T13:31:58+00:00"
+            "time": "2018-03-06T08:35:31+00:00"
         },
         {
             "name": "barryvdh/laravel-ide-helper",
@@ -3166,16 +3099,16 @@
         },
         {
             "name": "laravel/homestead",
-            "version": "v7.2.0",
+            "version": "v7.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/homestead.git",
-                "reference": "f42e0d49542a0ca3f342008db899021b8e794fe0"
+                "reference": "9f3654533723a792df2327b99e127d20be22e725"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/homestead/zipball/f42e0d49542a0ca3f342008db899021b8e794fe0",
-                "reference": "f42e0d49542a0ca3f342008db899021b8e794fe0",
+                "url": "https://api.github.com/repos/laravel/homestead/zipball/9f3654533723a792df2327b99e127d20be22e725",
+                "reference": "9f3654533723a792df2327b99e127d20be22e725",
                 "shasum": ""
             },
             "require": {
@@ -3212,7 +3145,7 @@
                 }
             ],
             "description": "A virtual machine for web artisans.",
-            "time": "2018-03-06T18:32:42+00:00"
+            "time": "2018-03-12T19:16:22+00:00"
         },
         {
             "name": "maximebf/debugbar",
@@ -3387,21 +3320,21 @@
         },
         {
             "name": "orchestra/testbench",
-            "version": "v3.6.2",
+            "version": "v3.6.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/orchestral/testbench.git",
-                "reference": "24ea3330f448815ac3bea53611e944f6eee0c308"
+                "reference": "feaad428c39318cdaef2caced6d49eda125dcb3e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orchestral/testbench/zipball/24ea3330f448815ac3bea53611e944f6eee0c308",
-                "reference": "24ea3330f448815ac3bea53611e944f6eee0c308",
+                "url": "https://api.github.com/repos/orchestral/testbench/zipball/feaad428c39318cdaef2caced6d49eda125dcb3e",
+                "reference": "feaad428c39318cdaef2caced6d49eda125dcb3e",
                 "shasum": ""
             },
             "require": {
-                "laravel/framework": "~5.6.4",
-                "orchestra/testbench-core": "~3.6.3",
+                "laravel/framework": "~5.6.5",
+                "orchestra/testbench-core": "~3.6.4",
                 "php": ">=7.1",
                 "phpunit/phpunit": "~7.0"
             },
@@ -3435,20 +3368,20 @@
                 "orchestral",
                 "testing"
             ],
-            "time": "2018-02-20T05:32:04+00:00"
+            "time": "2018-03-15T04:12:27+00:00"
         },
         {
             "name": "orchestra/testbench-core",
-            "version": "v3.6.3",
+            "version": "v3.6.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/orchestral/testbench-core.git",
-                "reference": "e07a2dd5b9399d56f487379ac3af515a4635bd6a"
+                "reference": "65c97dbefd2c68aa7d5dfcfdaa5a15184cb7b7e2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orchestral/testbench-core/zipball/e07a2dd5b9399d56f487379ac3af515a4635bd6a",
-                "reference": "e07a2dd5b9399d56f487379ac3af515a4635bd6a",
+                "url": "https://api.github.com/repos/orchestral/testbench-core/zipball/65c97dbefd2c68aa7d5dfcfdaa5a15184cb7b7e2",
+                "reference": "65c97dbefd2c68aa7d5dfcfdaa5a15184cb7b7e2",
                 "shasum": ""
             },
             "require": {
@@ -3499,7 +3432,7 @@
                 "orchestral",
                 "testing"
             ],
-            "time": "2018-02-20T04:08:58+00:00"
+            "time": "2018-03-13T02:45:12+00:00"
         },
         {
             "name": "phar-io/manifest",
@@ -4977,8 +4910,7 @@
         "roave/security-advisories": 20,
         "marvinlabs/laravel-menus": 20,
         "marvinlabs/laravel-html-font-awesome": 20,
-        "marvinlabs/laravel-html-bootstrap-4": 20,
-        "spatie/laravel-model-status": 20
+        "marvinlabs/laravel-html-bootstrap-4": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
