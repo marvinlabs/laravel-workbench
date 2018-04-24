@@ -121,7 +121,7 @@
         <h1 class="mt-5 mb-4">Files</h1>
 
         {{ bs()->formGroup()->control(bs()->file('avatar')) }}
-        {{ bs()->formGroup()->control(bs()->customFile('avatar2')) }}
+        {{ bs()->formGroup()->control(bs()->customFile('avatar2', 'Select a file')) }}
 
         <h1 class="mt-5 mb-4">Select</h1>
 
