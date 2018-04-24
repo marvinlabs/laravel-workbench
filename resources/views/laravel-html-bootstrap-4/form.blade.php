@@ -63,7 +63,6 @@
 
         {{-- Create a row using a custom configuration entry: config('bs4.form_rows.no_label') --}}
         {{ bs()->formGroup(bs()->checkBox('remember2', 'Remember me'))
-                ->label('Remember me', true)
                 ->helpText('This is the checkbox control help text...')
                 ->showAsRow('no_label')}}
 
@@ -110,18 +109,23 @@
         <h1 class="mt-5 mb-4">Text areas</h1>
 
         {{ bs()->formGroup()->control(
-                bs()->textarea('textarea', 'Lorem ipsum blah blah blah')) }}
+                bs()->textArea('textArea', 'Lorem ipsum blah blah blah')) }}
 
         {{ bs()->formGroup()->control(
                 bs()->text('plaintext', 'Read only and show as plain text')->readOnly(true)) }}
 
         {{ bs()->formGroup()->control(
-                bs()->textarea('textarea_ro', 'This one is read only')->disabled()) }}
+                bs()->textArea('textArea_ro', 'This one is read only')->disabled()) }}
+
+        <h1 class="mt-5 mb-4">Radios</h1>
+
+        {{ bs()->formGroup()->control(bs()->radio('radio1', 'Choice 1'))
+                ->helpText('This is the radio control help text...') }}
 
         <h1 class="mt-5 mb-4">Files</h1>
 
-        {{ bs()->formGroup()->control(bs()->file('avatar')) }}
-        {{ bs()->formGroup()->control(bs()->customFile('avatar2', 'Select a file')) }}
+        {{ bs()->formGroup()->control(bs()->simpleFile('avatar')) }}
+        {{ bs()->formGroup()->control(bs()->file('avatar2', 'Select a file')) }}
 
         <h1 class="mt-5 mb-4">Select</h1>
 

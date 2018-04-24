@@ -69,15 +69,24 @@
   "repositories": [
     {
       "type": "path",
-      "url": "packages/marvinlabs/laravel-html-font-awesome"
+      "url": "packages/marvinlabs/laravel-html-font-awesome",
+      "options": {
+        "symlink": true
+      }
     },
     {
       "type": "path",
-      "url": "packages/marvinlabs/laravel-html-bootstrap-4"
+      "url": "packages/marvinlabs/laravel-html-bootstrap-4",
+      "options": {
+        "symlink": true
+      }
     },
     {
       "type": "path",
-      "url": "packages/marvinlabs/laravel-menus"
+      "url": "packages/marvinlabs/laravel-menus",
+      "options": {
+        "symlink": true
+      }
     }
   ]
 }
