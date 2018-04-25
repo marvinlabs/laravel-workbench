@@ -119,8 +119,27 @@
 
         <h1 class="mt-5 mb-4">Radios</h1>
 
-        {{ bs()->formGroup()->control(bs()->radio('radio1', 'Choice 1'))
-                ->helpText('This is the radio control help text...') }}
+        {{ bs()->formGroup()->control(bs()->radio('lonely_radio', 'This is a lonely radio control', true))
+                            ->helpText('This is the radio control help text...') }}
+
+        {{ bs()->formGroup()->control(bs()->radioGroup('radio_field',
+                                                       [
+                                                           'choice_1' => 'Choice 1',
+                                                           'choice_2' => 'Choice 2',
+                                                           'choice_3' => 'Choice 3',
+                                                       ],
+                                                       'choice_2'))
+                            ->helpText('This is a radio group...') }}
+
+        {{ bs()->formGroup()->control(bs()->radioGroup('inline_radio_field',
+                                                       [
+                                                           'choice_1' => 'Choice 1',
+                                                           'choice_2' => 'Choice 2',
+                                                           'choice_3' => 'Choice 3',
+                                                       ],
+                                                       'choice_2')
+                                          ->inline())
+                            ->helpText('... and another radio group, shown inline this time') }}
 
         <h1 class="mt-5 mb-4">Files</h1>
 
