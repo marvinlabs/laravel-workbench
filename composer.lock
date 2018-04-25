@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "f963452a5d36f21c63676ee25b22a5a7",
+    "content-hash": "005a596c8f773610dc36ac0ec68a237e",
     "packages": [
         {
             "name": "appstract/laravel-blade-directives",
@@ -794,26 +794,21 @@
         },
         {
             "name": "marvinlabs/laravel-html-bootstrap-4",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/marvinlabs/laravel-html-bootstrap-4.git",
-                "reference": "083c477aa44d35649a05b70257eb964ea5868f85"
-            },
+            "version": "dev-develop",
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/marvinlabs/laravel-html-bootstrap-4/zipball/083c477aa44d35649a05b70257eb964ea5868f85",
-                "reference": "083c477aa44d35649a05b70257eb964ea5868f85",
-                "shasum": ""
+                "type": "path",
+                "url": "packages/marvinlabs/laravel-html-bootstrap-4",
+                "reference": "1f4f3341f6e7d90ccd1dce3af0a7aaa19d326594",
+                "shasum": null
             },
             "require": {
-                "appstract/laravel-blade-directives": "~0.7.0",
+                "appstract/laravel-blade-directives": "^0.7.0",
                 "php": "^7.0",
-                "spatie/laravel-html": "~2.10.0"
+                "spatie/laravel-html": "^2.19.0"
             },
             "require-dev": {
-                "orchestra/testbench": "~3.5",
-                "phpunit/phpunit": "~6.4"
+                "orchestra/testbench": "^3.5",
+                "phpunit/phpunit": "^6.4"
             },
             "type": "library",
             "extra": {
@@ -834,7 +829,16 @@
                     "src/helpers.php"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "MarvinLabs\\Html\\Bootstrap\\Tests\\": "tests"
+                }
+            },
+            "scripts": {
+                "test": [
+                    "vendor/bin/phpunit"
+                ]
+            },
             "license": [
                 "MIT"
             ],
@@ -846,14 +850,16 @@
                     "role": "Developer"
                 }
             ],
-            "description": "A fluent html builder for Font Awesome icons",
+            "description": "A fluent html builder for Bootstrap 4 components",
             "homepage": "https://github.com/marvinlabs/laravel-html-bootstrap-4",
             "keywords": [
                 "bootstrap-4",
                 "html",
                 "marvinlabs"
             ],
-            "time": "2018-03-06T15:58:44+00:00"
+            "transport-options": {
+                "symlink": true
+            }
         },
         {
             "name": "marvinlabs/laravel-html-font-awesome",
@@ -861,12 +867,12 @@
             "dist": {
                 "type": "path",
                 "url": "packages/marvinlabs/laravel-html-font-awesome",
-                "reference": "c673461c5e18267e9f1452d31d3e331916a8dc66",
+                "reference": "04999eb4c9b5823cfdf45bedba5d1bf79d800988",
                 "shasum": null
             },
             "require": {
                 "php": "^7.0",
-                "spatie/laravel-html": "~2.10.0"
+                "spatie/laravel-html": "^2.19.0"
             },
             "type": "library",
             "extra": {
@@ -914,7 +920,10 @@
                 "font-awesome",
                 "html",
                 "marvinlabs"
-            ]
+            ],
+            "transport-options": {
+                "symlink": true
+            }
         },
         {
             "name": "marvinlabs/laravel-menus",
@@ -922,18 +931,18 @@
             "dist": {
                 "type": "path",
                 "url": "packages/marvinlabs/laravel-menus",
-                "reference": "79d29ebe5bfad21dc8e48481fbf3cae642dc2b6c",
+                "reference": "78346b0020a3c7c2cb32c4603acd80660e25f34d",
                 "shasum": null
             },
             "require": {
-                "illuminate/support": ">=5.5",
+                "illuminate/support": "^5.5",
                 "php": ">=7.0",
-                "spatie/laravel-html": "~2.10.0"
+                "spatie/laravel-html": "^2.19.0"
             },
             "require-dev": {
-                "mockery/mockery": "~0.9",
-                "orchestra/testbench": "~3.6",
-                "phpunit/phpunit": "~7.0"
+                "mockery/mockery": "^0.9",
+                "orchestra/testbench": "^3.6",
+                "phpunit/phpunit": "^7.0"
             },
             "type": "library",
             "extra": {
@@ -982,7 +991,10 @@
                 "menus",
                 "nav",
                 "navigation"
-            ]
+            ],
+            "transport-options": {
+                "symlink": true
+            }
         },
         {
             "name": "monolog/monolog",
@@ -1675,26 +1687,26 @@
         },
         {
             "name": "spatie/laravel-html",
-            "version": "2.10.3",
+            "version": "2.19.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-html.git",
-                "reference": "f77d7858d578431a5cad97641d96b92493a839fa"
+                "reference": "64b682dafb5095f11b31c06b35ac117a376dc703"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-html/zipball/f77d7858d578431a5cad97641d96b92493a839fa",
-                "reference": "f77d7858d578431a5cad97641d96b92493a839fa",
+                "url": "https://api.github.com/repos/spatie/laravel-html/zipball/64b682dafb5095f11b31c06b35ac117a376dc703",
+                "reference": "64b682dafb5095f11b31c06b35ac117a376dc703",
                 "shasum": ""
             },
             "require": {
-                "illuminate/http": "~5.4",
-                "illuminate/support": "~5.4",
+                "illuminate/http": "~5.4.0|~5.5.0|~5.6.0",
+                "illuminate/support": "~5.4.0|~5.5.0|~5.6.0",
                 "php": "^7.0"
             },
             "require-dev": {
                 "mockery/mockery": "^1.0",
-                "phpunit/phpunit": "^6.0"
+                "phpunit/phpunit": "^6.0|^7.0"
             },
             "type": "library",
             "extra": {
@@ -1739,7 +1751,7 @@
                 "html",
                 "spatie"
             ],
-            "time": "2018-01-09T10:10:04+00:00"
+            "time": "2018-04-04T08:49:25+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -4913,8 +4925,8 @@
     "stability-flags": {
         "roave/security-advisories": 20,
         "marvinlabs/laravel-menus": 20,
-        "marvinlabs/laravel-html-font-awesome": 20,
-        "marvinlabs/laravel-html-bootstrap-4": 20
+        "marvinlabs/laravel-html-bootstrap-4": 20,
+        "marvinlabs/laravel-html-font-awesome": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

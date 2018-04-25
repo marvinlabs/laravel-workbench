@@ -13,9 +13,9 @@
     "fideloper/proxy": "~4.0",
     "laravel/framework": ">=5.6.4",
     "laravel/tinker": "~1.0",
-    "marvinlabs/laravel-menus": "@dev",
-    "marvinlabs/laravel-html-font-awesome": "@dev",
-    "marvinlabs/laravel-html-bootstrap-4": "@dev"
+    "marvinlabs/laravel-menus": "*@dev",
+    "marvinlabs/laravel-html-bootstrap-4": "*@dev",
+    "marvinlabs/laravel-html-font-awesome": "*@dev"
   },
   "require-dev": {
     "barryvdh/laravel-debugbar": "^3.1",

@@ -122,6 +122,9 @@
         {{ bs()->formGroup()->control(bs()->radio('lonely_radio', 'This is a lonely radio control', true))
                             ->helpText('This is the radio control help text...') }}
 
+        {{ bs()->formGroup()->control(bs()->radio('disabled_radio', 'This is a disabled radio control', true)
+                                          ->disabled()) }}
+
         {{ bs()->formGroup()->control(bs()->radioGroup('radio_field',
                                                        [
                                                            'choice_1' => 'Choice 1',
