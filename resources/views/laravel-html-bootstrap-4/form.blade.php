@@ -117,9 +117,21 @@
         {{ bs()->formGroup()->control(
                 bs()->textArea('textArea_ro', 'This one is read only')->disabled()) }}
 
+        <h1 class="mt-5 mb-4">Checkboxes</h1>
+
+        {{ bs()->formGroup()->control(bs()->checkBox('cb1', 'This is a lonely checkbox control', true)) }}
+
+        {{ bs()->formGroup()->control(bs()->checkBox('cb2', 'This is a lonely checkbox control', false)) }}
+
+        {{ bs()->formGroup()->control(bs()->checkBox('cb3', 'This is a disabled checkbox control', true)
+                                          ->disabled()) }}
+
         <h1 class="mt-5 mb-4">Radios</h1>
 
         {{ bs()->formGroup()->control(bs()->radio('lonely_radio', 'This is a lonely radio control', true))
+                            ->helpText('This is the radio control help text...') }}
+
+        {{ bs()->formGroup()->control(bs()->radio('lonely_radio2', 'This is a lonely radio control', false))
                             ->helpText('This is the radio control help text...') }}
 
         {{ bs()->formGroup()->control(bs()->radio('disabled_radio', 'This is a disabled radio control', true)
