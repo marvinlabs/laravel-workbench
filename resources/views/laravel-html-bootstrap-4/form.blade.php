@@ -73,6 +73,8 @@
 
         {{ bs()->closeForm() }}
 
+        {{ bs()->openForm('put', route('form-submit', [$category])) }}
+
         <h1 class="mt-5 mb-4">Control sizes</h1>
 
         {{ bs()->formGroup()->control(
@@ -174,6 +176,7 @@
         {{ bs()->formGroup()->control(
                 bs()->select('select_ro', ['FR' => 'France', 'S' => 'Sweden', 'P' => 'Portugal'], 'P')->disabled()) }}
 
+        {{ bs()->closeForm() }}
 
     </div>
 @endsection
