@@ -29,7 +29,9 @@
 
         <h1 class="mt-5 mb-4">Inline form</h1>
 
-        {{ bs()->openForm('put', route('form-submit', [$category]), ['inline' => true, 'hideErrors' => true]) }}
+        {{ bs()->openForm('put',
+                          route('form-submit', [$category]),
+                          ['inline' => true, 'hideErrors' => true, 'attributes' => ['id' => 'sample_form']]) }}
 
         {{ bs()->formGroup(bs()->text('first_name', 'John')->addClass('mb-2 mr-sm-2 mb-sm-0'))
                 ->label('First name', true) }}
