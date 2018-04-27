@@ -156,6 +156,8 @@
                                                            'choice_3' => 'Choice 3',
                                                        ],
                                                        'choice_2')
+                                          ->radioAttribute('data-yeah', 'An attribute on each radio wrapper')
+                                          ->radioControlAttribute('data-f_ck-me', 'An attribute on each radio control')
                                           ->inline())
                             ->helpText('... and another radio group, shown inline this time') }}
 
