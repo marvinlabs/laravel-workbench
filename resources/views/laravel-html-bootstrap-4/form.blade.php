@@ -126,6 +126,7 @@
         {{ bs()->formGroup()->control(bs()->checkBox('cb2', 'This is a lonely checkbox control', false)) }}
 
         {{ bs()->formGroup()->control(bs()->checkBox('cb3', 'This is a disabled checkbox control', true)
+                                          ->addControlClass('form-control-lg')
                                           ->disabled()) }}
 
         <h1 class="mt-5 mb-4">Radios</h1>
