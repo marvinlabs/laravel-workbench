@@ -29,9 +29,37 @@
 ## HTML description
 
 <div class="my-3">
-{{ bs()->radio('i_am')
-       ->description('I am a <a href="#">human</a>') }}
+{{ bs()->radioGroup('agree_terms_3', [
+           'y' => 'I am interested! <a href="#">details</a>',
+           'n' => 'No, thanks.',
+       ])
+       ->selectedOption('y') }}
 </div>
+
+## Calling methods on radio buttons
+
+You can prepend the `Radio` method names with radio in order to call that method on all
+the radio buttons contained in the group.
+
+For example, to disable all buttons (`disabled` method), you would call the `radioDisabled` 
+function on the group. 
+
+<div class="my-3">
+{{ bs()->radioGroup('agree_terms_4', [
+           'y' => 'I am disabled!',
+           'n' => 'Me too!',
+       ])
+       ->radioDisabled() }}
+</div>
+
+<div class="my-3">
+{{ bs()->radioGroup('agree_terms_5', [
+           'y' => 'Classes got added...',
+           'n' => '...to each radio',
+       ])
+       ->addRadioClass(['bg-light', 'my-3']) }}
+</div>
+
 
 ## Wrapped inside a form group
 
