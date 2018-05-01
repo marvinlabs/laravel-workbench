@@ -3,6 +3,21 @@
 @section('page.title', 'Laravel HTML Bootstrap 4')
 
 @section('page.body')
+
+    @foreach (['input-groups'] as $docPage)
+        <div class="container">
+            {{ bs()->openForm('put', route('form-submit', [$category])) }}
+
+            @include("docs.laravel-html-bootstrap-4.$docPage")
+
+            {{ bs()->submit('Submit') }}
+
+            {{ bs()->closeForm() }}
+
+            <hr>
+        </div>
+    @endforeach
+
     <div class="container">
         <h1 class="mt-5 mb-4">Simple form</h1>
 

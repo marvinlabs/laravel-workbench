@@ -14,6 +14,7 @@ return [
     */
 
     'paths' => [
+        base_path('packages/marvinlabs'),
         resource_path('views'),
     ],
 
