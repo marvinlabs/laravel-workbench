@@ -67,4 +67,33 @@ You can add multiple addons before/after the control.
        ->control(bs()->text('amount')) }}
 </div>
 
+## With text area
 
+The text area control is also supported.
+
+<div class="my-3">
+{{ bs()->inputGroup()
+       ->prefix('Content')
+       ->control(bs()->textArea('content')) }}
+</div>
+
+## With buttons
+
+<div class="my-3">
+{{ bs()->inputGroup()
+       ->control(bs()->text('amount', '20'))
+       ->prefix('$')
+       ->suffix(bs()->button('Pay now', 'primary'), false) }}
+</div>
+
+## Wrapped inside a form group
+
+It can be wrapped inside a form group if needed.
+
+<div class="my-3">
+{{ bs()->formGroup()
+       ->label('Username')
+       ->control(bs()->inputGroup()
+                     ->prefix('@')
+                     ->control(bs()->text('username'))) }}
+</div>
