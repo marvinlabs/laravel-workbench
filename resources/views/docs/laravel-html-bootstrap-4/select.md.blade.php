@@ -1,6 +1,6 @@
 # Select
 
-[Bootstrap documentation](https://getbootstrap.com/docs/4.1/components/forms/#select-menu
+[Bootstrap documentation](https://getbootstrap.com/docs/4.1/components/forms/#select-menu)
 
 ## Basic usage
 
