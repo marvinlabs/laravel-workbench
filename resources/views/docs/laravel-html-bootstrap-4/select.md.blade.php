@@ -11,8 +11,9 @@
 ## Multiple select
 
 <div class="my-3">
-{{ bs()->select('countries', ['FR' => 'France', 'S' => 'Sweden', 'P' => 'Portugal'], ['P', 'FR'])
-       ->multiple() }}
+{{ bs()->select('countries', ['FR' => 'France', 'S' => 'Sweden', 'P' => 'Portugal'])
+       ->multiple()
+       ->value(['P', 'FR']}}
 </div>
 
 ## Disabled
