@@ -12,6 +12,8 @@
 
 ## Progress height
 
+You can specify a height in pixels too.
+
 @foreach ([2, 10, 25] as $height)
 <div class="my-3">
     {!! bs()->progress()
@@ -20,7 +22,6 @@
             ->addClass('my-3') !!}
 @endforeach
 </div>
-
 
 ## Progress background
 

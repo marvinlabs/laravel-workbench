@@ -8,6 +8,13 @@
 {{ bs()->select('country', ['FR' => 'France', 'S' => 'Sweden', 'P' => 'Portugal'], 'P') }}
 </div>
 
+## Multiple select
+
+<div class="my-3">
+{{ bs()->select('countries', ['FR' => 'France', 'S' => 'Sweden', 'P' => 'Portugal'], ['P', 'FR'])
+       ->multiple() }}
+</div>
+
 ## Disabled
 
 <div class="my-3">
