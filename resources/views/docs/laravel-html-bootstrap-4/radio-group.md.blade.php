@@ -42,7 +42,11 @@ You can prepend the `Radio` method names with radio in order to call that method
 the radio buttons contained in the group.
 
 For example, to disable all buttons (`disabled` method), you would call the `radioDisabled` 
-function on the group. 
+function on the group. Here are the rules:
+
+- `group->radioMyMethod()` &rarr; `group->radios->each->myMethod()` (eg. `disabled()`)
+- `group->addRadioMethod()` &rarr; `group->radios->each->addMethod()` (eg. `addClass()`)
+- `group->forgetRadioMethod()` &rarr; `group->radios->each->forgetMethod()` (eg. `forgetAttribute()`)
 
 <div class="my-3">
 {{ bs()->radioGroup('agree_terms_4', [
@@ -54,7 +58,7 @@ function on the group.
 
 <div class="my-3">
 {{ bs()->radioGroup('agree_terms_5', [
-           'y' => 'Classes got added...',
+           'y' => 'CSS classes got added...',
            'n' => '...to each radio',
        ])
        ->addRadioClass(['bg-light', 'my-3']) }}
