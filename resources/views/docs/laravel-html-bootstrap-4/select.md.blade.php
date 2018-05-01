@@ -13,7 +13,19 @@
 <div class="my-3">
 {{ bs()->select('countries', ['FR' => 'France', 'S' => 'Sweden', 'P' => 'Portugal'])
        ->multiple()
-       ->value(['P', 'FR']}}
+       ->value(['P', 'FR']) }}
+</div>
+
+## Placeholder
+
+<div class="my-3">
+{{ bs()->select('country', ['FR' => 'France', 'S' => 'Sweden', 'P' => 'Portugal'])
+       ->placeholder('Sélectionnez un pays') }}
+</div>
+
+<div class="my-3">
+{{ bs()->select('country', ['FR' => 'France', 'S' => 'Sweden', 'P' => 'Portugal'])
+       ->placeholder('Sélectionnez un pays', -1) }}
 </div>
 
 ## Disabled
