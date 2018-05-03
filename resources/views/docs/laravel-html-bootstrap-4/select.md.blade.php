@@ -23,6 +23,8 @@
        ->placeholder('Sélectionnez un pays') }}
 </div>
 
+You can set a custom value for the placeholder option too
+
 <div class="my-3">
 {{ bs()->select('country', ['FR' => 'France', 'S' => 'Sweden', 'P' => 'Portugal'])
        ->placeholder('Sélectionnez un pays', -1) }}
