@@ -16,6 +16,7 @@
     "marvinlabs/laravel-html-bootstrap-4": "*@dev",
     "marvinlabs/laravel-html-font-awesome": "*@dev",
     "marvinlabs/laravel-menus": "*@dev",
+    "marvinlabs/laravel-luhn": "*@dev",
     "roave/security-advisories": "dev-master"
   },
   "require-dev": {
@@ -41,7 +42,8 @@
     "psr-4": {
       "Tests\\": "tests/",
       "MarvinLabs\\Html\\Bootstrap\\Tests\\": "packages/marvinlabs/laravel-html-bootstrap-4/tests",
-      "MarvinLabs\\Menus\\Tests\\": "packages/marvinlabs/laravel-menus/tests"
+      "MarvinLabs\\Menus\\Tests\\": "packages/marvinlabs/laravel-menus/tests",
+      "MarvinLabs\\Luhn\\Tests\\": "packages/marvinlabs/laravel-luhn/tests"
     }
   },
   "extra": {
@@ -85,6 +87,13 @@
     {
       "type": "path",
       "url": "packages/marvinlabs/laravel-menus",
+      "options": {
+        "symlink": true
+      }
+    },
+    {
+      "type": "path",
+      "url": "packages/marvinlabs/laravel-luhn",
       "options": {
         "symlink": true
       }
