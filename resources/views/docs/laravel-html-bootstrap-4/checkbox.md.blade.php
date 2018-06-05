@@ -41,9 +41,9 @@
 </div>
 
 <div class="my-3">
-{{ bs()->checkbox('frameworks[laravel]')->description('Laravel') }}
-{{ bs()->checkbox('frameworks[symfony]')->description('Symfony') }}
-{{ bs()->checkbox('frameworks[cakephp]')->description('CakePHP') }}
+{{ bs()->checkbox('frameworks[laravel][is_selected]')->description('Laravel') }}
+{{ bs()->checkbox('frameworks[symfony][is_selected]')->description('Symfony') }}
+{{ bs()->checkbox('frameworks[cakephp][is_selected]')->description('CakePHP') }}
 </div>
 
 ## Wrapped inside a form group

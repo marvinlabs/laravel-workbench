@@ -3,6 +3,7 @@
 use App\User;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Validator;
 
 /*
 |--------------------------------------------------------------------------
@@ -52,24 +53,29 @@ Route::get('/docs/{package}/{view?}',
 Route::match(['post', 'put'],
     '/docs/{package}/{view}',
     function ($package, $view) {
+        $validator = Validator::make(request()->all(),
+            [
+                'hobbies'                  => 'required|url',
+                'frameworks.*.is_selected' => 'required|url',
+                'username'                 => 'required|url',
+                'amount'                   => 'required|url',
+                'content'                  => 'required|url',
+                'first_name'               => 'required|url',
+                'last_name'                => 'required|url',
+                'email'                    => 'required|url',
+                'agree_terms'              => 'required|url',
+                'agree_terms_0'            => 'required|url',
+                'agree_terms_1'            => 'required|url',
+                'agree_terms_2'            => 'required|url',
+                'agree_terms_3'            => 'required|url',
+                'avatar'                   => 'required|url',
+                'country'                  => 'required|url',
+                'avatar2'                  => 'required|url',
+            ]);
+    //    dd(request()->all(), $validator->errors()->getMessages());
         return redirect()->back()
                          ->withInput()
-                         ->withErrors([
-                             'username'    => 'The username is required',
-                             'amount'      => 'Invalid amount',
-                             'content'     => 'Content cannot be empty',
-                             'first_name'  => 'The first name is required',
-                             'last_name'   => 'The last name is required',
-                             'email'       => 'This is a sample error for emails',
-                             'agree_terms' => 'You must check this box!',
-                             'agree_terms_0' => 'You must check this box!',
-                             'agree_terms_1' => 'You must check this box!',
-                             'agree_terms_2' => 'You must check this box!',
-                             'agree_terms_3' => 'You must check this box!',
-                             'avatar'      => 'Pick a file',
-                             'country'     => 'Please select your country',
-                             'avatar2'     => 'This file is required',
-                         ]);
+                         ->withErrors($validator->errors());
     })->name('form-submit');
 
 

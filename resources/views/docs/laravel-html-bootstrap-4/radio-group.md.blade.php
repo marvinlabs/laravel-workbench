@@ -5,7 +5,7 @@
 ## Basic usage
 
 <div class="my-3">
-{{ bs()->radioGroup('agree_terms_0', [
+{{ bs()->radioGroup('agree_terms_0[]', [
                   'y' => 'I am interested!',
                   'n' => 'No, thanks.',
               ]) }}
