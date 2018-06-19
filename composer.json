@@ -26,8 +26,9 @@
     "fzaninotto/faker": "~1.4",
     "laravel/homestead": "^7.0",
     "mockery/mockery": "0.9.*",
+    "orchestra/testbench": "~3.6",
     "phpunit/phpunit": "~7.0",
-    "orchestra/testbench": "~3.6"
+    "symfony/dom-crawler": "^4.1"
   },
   "autoload": {
     "classmap": [
