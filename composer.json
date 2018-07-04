@@ -17,6 +17,8 @@
     "marvinlabs/laravel-html-font-awesome": "*@dev",
     "marvinlabs/laravel-menus": "*@dev",
     "marvinlabs/laravel-luhn": "*@dev",
+    "spatie/laravel-binary-uuid": "*@dev",
+    "spatie/laravel-model-status": "*@dev",
     "roave/security-advisories": "dev-master"
   },
   "require-dev": {
@@ -44,7 +46,9 @@
       "Tests\\": "tests/",
       "MarvinLabs\\Html\\Bootstrap\\Tests\\": "packages/marvinlabs/laravel-html-bootstrap-4/tests",
       "MarvinLabs\\Menus\\Tests\\": "packages/marvinlabs/laravel-menus/tests",
-      "MarvinLabs\\Luhn\\Tests\\": "packages/marvinlabs/laravel-luhn/tests"
+      "MarvinLabs\\Luhn\\Tests\\": "packages/marvinlabs/laravel-luhn/tests",
+      "Spatie\\BinaryUuid\\Test\\": "packages/spatie/laravel-binary-uuid/tests",
+      "Spatie\\ModelStatus\\Test\\": "packages/spatie/laravel-model-status/tests"
     }
   },
   "extra": {
@@ -95,6 +99,20 @@
     {
       "type": "path",
       "url": "packages/marvinlabs/laravel-luhn",
+      "options": {
+        "symlink": true
+      }
+    },
+    {
+      "type": "path",
+      "url": "packages/spatie/laravel-binary-uuid",
+      "options": {
+        "symlink": true
+      }
+    },
+    {
+      "type": "path",
+      "url": "packages/spatie/laravel-model-status",
       "options": {
         "symlink": true
       }
