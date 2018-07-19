@@ -48,7 +48,7 @@
       "MarvinLabs\\Menus\\Tests\\": "packages/marvinlabs/laravel-menus/tests",
       "MarvinLabs\\Luhn\\Tests\\": "packages/marvinlabs/laravel-luhn/tests",
       "Spatie\\BinaryUuid\\Test\\": "packages/spatie/laravel-binary-uuid/tests",
-      "Spatie\\ModelStatus\\Test\\": "packages/spatie/laravel-model-status/tests"
+      "Spatie\\ModelStatus\\Tests\\": "packages/spatie/laravel-model-status/tests"
     }
   },
   "extra": {
