@@ -19,6 +19,7 @@
     "marvinlabs/laravel-luhn": "*@dev",
     "spatie/laravel-binary-uuid": "*@dev",
     "spatie/laravel-model-status": "*@dev",
+    "spatie/laravel-permission": "*@dev",
     "roave/security-advisories": "dev-master"
   },
   "require-dev": {
@@ -48,7 +49,8 @@
       "MarvinLabs\\Menus\\Tests\\": "packages/marvinlabs/laravel-menus/tests",
       "MarvinLabs\\Luhn\\Tests\\": "packages/marvinlabs/laravel-luhn/tests",
       "Spatie\\BinaryUuid\\Test\\": "packages/spatie/laravel-binary-uuid/tests",
-      "Spatie\\ModelStatus\\Tests\\": "packages/spatie/laravel-model-status/tests"
+      "Spatie\\ModelStatus\\Tests\\": "packages/spatie/laravel-model-status/tests",
+      "Spatie\\Permission\\Test\\": "packages/spatie/laravel-permission/tests"
     }
   },
   "extra": {
@@ -113,6 +115,13 @@
     {
       "type": "path",
       "url": "packages/spatie/laravel-model-status",
+      "options": {
+        "symlink": true
+      }
+    },
+    {
+      "type": "path",
+      "url": "packages/spatie/laravel-permission",
       "options": {
         "symlink": true
       }
