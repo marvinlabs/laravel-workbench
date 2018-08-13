@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
     "content-hash": "5b6eb6ecc753e781c48c1171a7612c45",
@@ -2034,11 +2034,11 @@
         },
         {
             "name": "spatie/laravel-model-status",
-            "version": "9999999-dev",
+            "version": "dev-master",
             "dist": {
                 "type": "path",
                 "url": "packages/spatie/laravel-model-status",
-                "reference": "17a24aa6f6aff8490a2023fa7ce92b3c4ac243db",
+                "reference": "c6eb525582c5f00af395af9b918579d2fdf8782e",
                 "shasum": null
             },
             "require": {
