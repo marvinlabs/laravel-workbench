@@ -29,6 +29,7 @@
         <env name="QUEUE_DRIVER" value="sync"/>
         <env name="DB_CONNECTION" value="sqlite"/>
         <env name="DB_DATABASE" value=":memory:"/>
+        <env name="LOG_DISCORD_WEBHOOK_URL" value="https://discordapp.com/api/webhooks/583048421460410407/Iwc8POIJL1kAEPGkt35LepGS4FYJJawUbh91Nj0pvpcr76iaEcC8hdDOm6R1QBRBhvpa"/>
         <!--<env name="DB_CONNECTION" value="mysql"/>-->
         <!--<env name="DB_DATABASE" value="homestead"/>-->
         <!--<env name="DB_USERNAME" value="homestead"/>-->
