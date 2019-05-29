@@ -32,7 +32,7 @@ return [
     'channels' => [
         'stack' => [
             'driver'   => 'stack',
-            'channels' => ['single'],
+            'channels' => ['single', 'discord',],
         ],
 
         'single' => [
@@ -68,9 +68,9 @@ return [
 
         'discord' => [
             'driver' => 'custom',
-            'via'    => Marvinlabs\DiscordLogger\Logger::class,
-            'level'  => 'debug',
-            'url'    => env('LOG_DISCORD_WEBHOOK_URL', null),
+            'via'    => MarvinLabs\DiscordLogger\Logger::class,
+            'level'  => 'info',
+            'url'    => env('LOG_DISCORD_WEBHOOK_URL'),
         ],
     ],
 
