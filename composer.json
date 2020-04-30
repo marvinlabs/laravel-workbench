@@ -52,6 +52,7 @@
     "autoload-dev": {
         "psr-4": {
             "Tests\\": "tests/",
+            "Iben\\Statable\\Test\\": "packages/iben12/laravel-statable/tests",
             "MarvinLabs\\Luhn\\Tests\\": "packages/marvinlabs/laravel-luhn/tests",
             "MarvinLabs\\DiscordLogger\\Tests\\": "packages/marvinlabs/laravel-discord-logger/tests"
         }
