@@ -27,6 +27,6 @@
         <server name="QUEUE_CONNECTION" value="sync"/>
         <server name="SESSION_DRIVER" value="array"/>
         <server name="TELESCOPE_ENABLED" value="false"/>
-        <server name="LOG_DISCORD_WEBHOOK_URL" value="https://discordapp.com/api/webhooks/583048421460410407/Iwc8POIJL1kAEPGkt35LepGS4FYJJawUbh91Nj0pvpcr76iaEcC8hdDOm6R1QBRBhvpa"/>
+        <server name="LOG_DISCORD_WEBHOOK_URL" value=""/>
     </php>
 </phpunit>
